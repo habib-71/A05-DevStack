@@ -1,7 +1,7 @@
 import Logo from "../assets/logo-text.png";
 const Nav = () => {
     return (
-   <nav className="border-b border-gray-300 shadow-sm sticky top-0 bg-white z-50 p-5">
+   <nav className="border-b border-gray-300 shadow-sm sticky top-0 bg-white z-50 py-5">
             <div className="flex justify-between items-center container mx-auto">
                 <div>
                 <img src={Logo} alt="Logo" />
