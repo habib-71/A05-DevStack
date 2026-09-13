@@ -1,4 +1,4 @@
-## A05-DevStack
+## DevStack
 
 A05-DevStack is a React and TypeScript web application where users can explore development technologies and build their own technology stack.
 
