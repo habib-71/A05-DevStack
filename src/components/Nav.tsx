@@ -22,18 +22,18 @@ const Nav = () => {
         <nav className="border-b border-gray-300 shadow-sm sticky top-0 bg-white z-50 py-4">
             <div className="container mx-auto px-4">
 
-                
+
 
 
                 {/* Desktop Navbar */}
                 <div className="hidden md:flex items-center justify-between">
 
-                    
+
                     <a href="#home">
                         <img src={Logo} alt="Dev Stack" />
                     </a>
 
-                    
+
                     <ul className="flex gap-6 items-center">
                         {menuItems.map((item) => (
                             <li key={item.name}>
@@ -48,7 +48,7 @@ const Nav = () => {
                         ))}
                     </ul>
 
-                    
+
                     <div className="justify-self-end flex items-center gap-2">
                         <button className="text-sm font-medium text-gray-700 hover:text-red-500 transition-colors duration-200">
                             Sign In
@@ -58,7 +58,7 @@ const Nav = () => {
                             <i className="fa-regular fa-user"></i>
                         </button>
 
-                        <button className="px-3 py-2 text-sm bg-red-500 text-white font-medium rounded-full shadow-sm hover:bg-red-600 hover:-translate-y-1 transition-all duration-200">
+                        <button className="px-3 py-2 text-sm bg-brand-gradient text-white font-medium rounded-full shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
                             Sign Up
                         </button>
                     </div>
@@ -80,7 +80,7 @@ const Nav = () => {
                         <img src={Logo} alt="Dev Stack" className="w-24" />
                     </a>
 
-                    
+
                     <div className="flex items-center gap-2 justify-self-end">
                         <button className="text-xs font-medium text-gray-700 hover:text-red-500 transition-colors duration-200">
                             Sign In

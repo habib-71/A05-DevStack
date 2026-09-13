@@ -17,7 +17,7 @@ const Banner = () => {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
                     Build Your Ideal <br />
 
-                    <span className="bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">
+                    <span className="bg-brand-gradient bg-clip-text text-transparent">
                         Development Stack
                     </span>
                 </h1>
@@ -33,7 +33,7 @@ const Banner = () => {
 
                 <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-9">
 
-                    <button className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-white font-semibold bg-linear-to-r from-[#FF5722] to-[#D81B7E] shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300">
+                    <button className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-white font-semibold bg-brand-gradient shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300">
                         Explore Technologies
                     </button>
 

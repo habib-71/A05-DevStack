@@ -62,8 +62,8 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
                         <div
                             key={technology.id}
                             className={`border rounded-2xl p-4 md:p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${isSelected
-                                    ? "border-red-400 bg-red-50/30 shadow-md"
-                                    : "border-gray-200"
+                                ? "border-red-400 bg-red-50/30 shadow-md"
+                                : "border-gray-200"
                                 }`}
                         >
                             <div className="flex justify-between items-start">
@@ -88,16 +88,16 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
                                 {technology.description}
                             </p>
 
-                            <div className="flex flex-wrap gap-2 mt-5">
-                                <span className="px-3 py-1 rounded-full bg-orange-50 text-orange-600 text-xs font-medium border border-orange-100">
+                            <div className="flex flex-wrap lg:flex-nowrap gap-2 mt-5">
+                                <span className="px-3 py-1 rounded-full bg-orange-50 text-orange-600 text-xs font-medium border border-orange-100 whitespace-nowrap">
                                     {technology.category}
                                 </span>
 
-                                <span className="px-3 py-1 rounded-full bg-purple-50 text-purple-600 text-xs font-medium border border-purple-100">
+                                <span className="px-3 py-1 rounded-full bg-purple-50 text-purple-600 text-xs font-medium border border-purple-100 whitespace-nowrap">
                                     {technology.difficulty}
                                 </span>
 
-                                <span className="px-3 py-1 rounded-full bg-yellow-50 text-black text-xs font-medium border border-yellow-100">
+                                <span className="px-3 py-1 rounded-full bg-yellow-50 text-black text-xs font-medium border border-yellow-100 whitespace-nowrap">
                                     ⭐ {technology.rating}
                                 </span>
                             </div>
@@ -105,8 +105,8 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
                             <button
                                 onClick={() => handleAddToStack(technology)}
                                 className={`w-full mt-5 px-4 py-3 rounded-xl text-sm font-semibold text-white transition-all duration-300 ${isSelected
-                                        ? "bg-gray-400 hover:bg-gray-500"
-                                        : "bg-linear-to-r from-[#FF5722] to-[#D81B7E] shadow-sm hover:shadow-md hover:scale-[1.02]"
+                                    ? "bg-gray-400 hover:bg-gray-500"
+                                    : "bg-brand-gradient shadow-sm hover:shadow-md hover:scale-[1.02]"
                                     }`}
                             >
                                 {isSelected ? "✓ Added to Stack" : "Add to Stack"}

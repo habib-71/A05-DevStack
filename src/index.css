@@ -1,2 +1,18 @@
 @import "tailwindcss";
+
 @plugin "daisyui";
+
+@theme {
+    --color-brand-orange: #FF5722;
+    --color-brand-pink: #D81B7E;
+    --color-brand-violet: #7C3AED;
+}
+
+@utility bg-brand-gradient {
+    background-image: linear-gradient(
+        to right,
+        var(--color-brand-orange),
+        var(--color-brand-pink),
+        var(--color-brand-violet)
+    );
+}
