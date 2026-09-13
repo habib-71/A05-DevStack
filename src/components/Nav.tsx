@@ -25,9 +25,11 @@ const Nav = () => {
                 {/* Desktop Navbar */}
                 <div className="hidden md:flex items-center justify-between">
 
+
                     <a href="#home">
                         <img src={Logo} alt="Dev Stack" />
                     </a>
+
 
                     <ul className="flex gap-6 items-center">
                         {menuItems.map((item) => (
@@ -46,37 +48,49 @@ const Nav = () => {
                         ))}
                     </ul>
 
+
                     <div className="flex items-center gap-2">
-                        {/* Sign In */}
+
+
                         <button className="text-sm font-medium text-gray-700 hover:text-red-500 active:scale-95 transition-all duration-200">
                             Sign In
                         </button>
 
-                        {/* User Icon */}
+
                         <button className="w-8 h-8 flex items-center justify-center rounded-full text-gray-600 hover:bg-gray-100 hover:text-red-500 active:scale-90 transition-all duration-200">
                             <i className="fa-regular fa-user"></i>
                         </button>
 
-                        {/* Sign Up */}
-                        <button className="px-3 py-2 text-sm bg-brand-gradient text-white font-medium rounded-full shadow-sm hover:shadow-md hover:-translate-y-1 active:scale-95 transition-all duration-200">
+
+                        <button
+                            className="shrink-0 mr-2 px-3 py-2 text-xs bg-brand-gradient text-white font-medium rounded-full whitespace-nowrap shadow-sm hover:shadow-md active:scale-90 active:shadow-inner transition-all duration-150"
+                        >
                             Sign Up
                         </button>
+
                     </div>
                 </div>
 
                 {/* Mobile Navbar */}
-                <div className="grid grid-cols-3 items-center md:hidden">
+                <div className="flex items-center gap-3 md:hidden">
 
                     {/* Menu Button */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="justify-self-start w-10 h-10 flex items-center justify-center rounded-full text-2xl text-gray-700 hover:bg-gray-100 active:scale-90 transition-all duration-200"
+                        className="shrink-0 w-9 h-9 flex items-center justify-center rounded-full text-2xl text-gray-700 hover:bg-gray-100 active:scale-90 transition-all duration-200"
                     >
                         {isMenuOpen ? "✕" : "☰"}
                     </button>
 
-                    {/* Logo */}
-                    <a href="#home" className="justify-self-center">
+
+                    <button
+                        className="shrink-0 w-8 h-8 flex items-center justify-center rounded-full text-gray-600 hover:bg-gray-100 hover:text-red-500 active:scale-90 transition-all duration-200"
+                    >
+                        <i className="fa-regular fa-user"></i>
+                    </button>
+
+
+                    <a href="#home" className="shrink-0 mx-auto">
                         <img
                             src={Logo}
                             alt="Dev Stack"
@@ -84,21 +98,18 @@ const Nav = () => {
                         />
                     </a>
 
-                    {/* Mobile Auth Buttons */}
-                    <div className="flex items-center gap-2 justify-self-end">
 
-                        {/* Sign In */}
-                        <button className="text-xs font-medium text-gray-700 hover:text-red-500 active:scale-95 transition-all duration-200">
-                            Sign In
-                        </button>
+                    <button className="shrink-0 whitespace-nowrap text-xs font-medium text-gray-700 hover:text-red-500 active:scale-95 transition-all duration-200">
+                        Sign In
+                    </button>
 
-                        {/* Sign Up */}
-                        <button
-                            className="px-3 py-2 text-xs bg-brand-gradient text-white font-medium rounded-full whitespace-nowrap shadow-sm hover:shadow-md active:scale-90 active:shadow-inner transition-all duration-150"
-                        >
-                            Sign Up
-                        </button>
-                    </div>
+
+                    <button
+                        className="shrink-0 px-3 py-2 text-xs bg-brand-gradient text-white font-medium rounded-full whitespace-nowrap shadow-sm hover:shadow-md active:scale-90 active:shadow-inner transition-all duration-150"
+                    >
+                        Sign Up
+                    </button>
+
                 </div>
 
                 {/* Mobile Menu */}
