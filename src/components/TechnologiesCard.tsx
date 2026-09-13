@@ -72,17 +72,17 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
                                 onClick={() => handleAddToStack(technology)}
                                 disabled={isSelected}
                                 className={`w-full mt-5 px-4 py-3 rounded-xl text-sm font-semibold text-white transition-all duration-300 ${isSelected
-                                    ? "bg-gray-400 cursor-not-allowed"
-                                    : "bg-linear-to-r from-[#FF5722] to-[#D81B7E] shadow-sm hover:shadow-md hover:scale-[1.02]"
+                                        ? "bg-gray-400 cursor-not-allowed"
+                                        : "bg-linear-to-r from-[#FF5722] to-[#D81B7E] shadow-sm hover:shadow-md hover:scale-[1.02]"
                                     }`}
                             >
-                                Add to Stack
+                                {isSelected ? "✓ Added to Stack" : "Add to Stack"}
                             </button>
                         </div>
                     );
                 })}
             </div>
-            
+
             {/* Stack Card */}
             <div className="w-[30%] self-start border border-gray-200 rounded-2xl p-5 shadow-sm mt-6">
 
@@ -139,7 +139,7 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
 
                         <button
                             onClick={handleRemoveAll}
-                            className="w-full mt-4 border border-red-200 text-red-500 hover:bg-red-50 font-medium text-sm py-3 rounded-xl transition">
+                            className="w-full mt-4 border border-red-200 text-red-500 hover:bg-red-50 hover:border-red-300 font-medium text-sm py-3 rounded-xl transition-all duration-300">
                             Remove All
                         </button>
 
