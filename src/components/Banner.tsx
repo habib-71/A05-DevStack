@@ -33,11 +33,11 @@ const Banner = () => {
 
                 <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-9">
 
-                    <button className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-white font-semibold bg-brand-gradient shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300">
+                    <button className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-white font-semibold bg-brand-gradient shadow-md hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] active:scale-95 transition-all duration-200">
                         Explore Technologies
                     </button>
 
-                    <button className="w-full sm:w-auto px-7 py-3.5 rounded-xl border border-gray-300 bg-white/70 font-semibold text-gray-700 hover:bg-white hover:border-gray-400 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                    <button className="w-full sm:w-auto px-7 py-3.5 rounded-xl border border-gray-300 bg-white/70 font-semibold text-gray-700 hover:bg-white hover:border-gray-400 hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200">
                         Learn More
                     </button>
 

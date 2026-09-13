@@ -104,9 +104,10 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
 
                             <button
                                 onClick={() => handleAddToStack(technology)}
-                                className={`w-full mt-5 px-4 py-3 rounded-xl text-sm font-semibold text-white transition-all duration-300 ${isSelected
+                                disabled={isSelected}
+                                className={`w-full mt-5 px-4 py-3 rounded-xl text-sm font-semibold text-white transition-all duration-200 ${isSelected
                                     ? "bg-gray-400 hover:bg-gray-500"
-                                    : "bg-brand-gradient shadow-sm hover:shadow-md hover:scale-[1.02]"
+                                    : "bg-brand-gradient shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-95"
                                     }`}
                             >
                                 {isSelected ? "✓ Added to Stack" : "Add to Stack"}
@@ -127,7 +128,10 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
                 <p className="mt-2 text-sm text-gray-500">
                     {selectedTechnologies.length === 0
                         ? "No technology selected"
-                        : `${selectedTechnologies.length} technology selected`}
+                        : `${selectedTechnologies.length} ${selectedTechnologies.length === 1
+                            ? "technology"
+                            : "technologies"
+                        } selected`}
                 </p>
 
                 {/* Selected Technologies */}
