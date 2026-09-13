@@ -23,6 +23,7 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
 
     return (
         <div className="flex gap-6 mt-6">
+
             {/* technology cards */}
             <div className="grid grid-cols-3 w-[70%] gap-6 mt-6">
                 {technologies.map((technology: ITechnologies) => {
@@ -63,7 +64,7 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
                                 <span className="px-3 py-1 rounded-full bg-purple-50 text-purple-600 text-xs font-medium border border-purple-100">
                                     {technology.difficulty}
                                 </span>
-                                <span className="px-3 py-1 rounded-full bg-yellow-50 text-yellow-600 text-xs font-medium border border-yellow-100">
+                                <span className="px-3 py-1 rounded-full bg-yellow-50 text-black text-xs font-medium border border-yellow-100">
                                     ⭐ {technology.rating}
                                 </span>
                             </div>
@@ -81,6 +82,7 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
                     );
                 })}
             </div>
+            
             {/* Stack Card */}
             <div className="w-[30%] self-start border border-gray-200 rounded-2xl p-5 shadow-sm mt-6">
 
@@ -144,7 +146,6 @@ const TechnologiesCard = ({ technologies }: TechnologiesCardProps) => {
                     </div>
                 )}
 
-                {/* Empty State */}
                 {selectedTechnologies.length === 0 && (
                     <div className="mt-5 border border-dashed border-gray-300 rounded-xl p-8 text-center">
                         <h3 className="text-sm font-semibold text-gray-700">

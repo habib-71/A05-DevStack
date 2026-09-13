@@ -2,7 +2,7 @@ import Logo from "../assets/logo-text.png";
 
 const Footer = () => {
     return (
-        <footer className="border-t border-gray-200 mt-10 px-6 py-12">
+        <footer id="footer" className="border-t border-gray-200 mt-10 px-6 py-12">
             <div className="grid grid-cols-4 gap-12 pb-12 container mx-auto border-b border-gray-300">
                 <div>
                     <img src={Logo} alt="Logo" />
@@ -13,9 +13,9 @@ const Footer = () => {
                     </p>
 
                     <div className="flex gap-5 mt-6">
-                        <a target="_blank" href="https://github.com" className="text-sm font-bold hover:text-gray-900 transition-colors">GitHub</a>
-                        <a target="_blank" href="https://twitter.com" className="text-sm font-bold hover:text-gray-900 transition-colors">Twitter</a>
-                        <a target="_blank" href="https://linkedin.com" className="text-sm font-bold hover:text-gray-900 transition-colors">LinkedIn</a>
+                        <a target="_blank" href="https://github.com" className="text-sm font-bold hover:text-red-400 hover:scale-105 transition duration-200">GitHub</a>
+                        <a target="_blank" href="https://twitter.com" className="text-sm font-bold hover:text-red-400 hover:scale-105 transition duration-200">Twitter</a>
+                        <a target="_blank" href="https://linkedin.com" className="text-sm font-bold hover:text-red-400 hover:scale-105 transition duration-200">LinkedIn</a>
                     </div>
                 </div>
 
@@ -25,9 +25,9 @@ const Footer = () => {
                     </h3>
 
                     <div className="flex flex-col gap-3 mt-5 text-sm text-gray-500">
-                        <a href="#home">Home</a>
-                        <a href="#technologies">Technologies</a>
-                        <a href="#">Projects</a>
+                        <a href="#home" className="hover:text-gray-600 hover:font-bold transition-colors">Home</a>
+                        <a href="#technologies" className="hover:text-gray-600 hover:font-bold transition-colors">Technologies</a>
+                        <a href="#home" className="hover:text-gray-600 hover:font-bold transition-colors">Projects</a>
                     </div>
                 </div>
 
