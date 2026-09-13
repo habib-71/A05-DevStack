@@ -5,27 +5,41 @@ import Technologies from "./components/Technologies";
 import type { ITechnologies } from "./types/TechnologiesCardTypes";
 import Footer from "./components/Footer";
 
-const technologiesFetch = async ():Promise<ITechnologies[]> => {
-const res = await fetch('/data.json');
-  const data=await res.json();
-  return data;
-}
+const technologiesFetch = async (): Promise<ITechnologies[]> => {
+    const res = await fetch("/data.json");
+    const data = await res.json();
+    return data;
+};
 
 function App() {
-  const technologiesPromise=technologiesFetch();
-  return (
-    <>
+    const technologiesPromise = technologiesFetch();
 
-      <Nav></Nav>
-      <Banner></Banner>
-      <Suspense fallback={<h2>Loading......</h2>}>
-        <Technologies technologiesPromise={technologiesPromise}></Technologies>
-      </Suspense>
-      <Footer></Footer>
+    return (
+        <>
+            <Nav />
+            <Banner />
 
-      
-    </>
-  )
+            <Suspense
+                fallback={
+                    <div className="container mx-auto flex min-h-[300px] items-center justify-center">
+                        <div className="flex flex-col items-center gap-4">
+                            <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-red-500"></div>
+
+                            <p className="text-sm font-medium text-gray-500">
+                                Loading technologies...
+                            </p>
+                        </div>
+                    </div>
+                }
+            >
+                <Technologies
+                    technologiesPromise={technologiesPromise}
+                />
+            </Suspense>
+
+            <Footer />
+        </>
+    );
 }
 
-export default App
+export default App;
