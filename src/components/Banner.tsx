@@ -1,7 +1,7 @@
 import BannerImg from "../assets/banner-stack.png";
 const Banner = () => {
     return (
-        <section className="flex justify-between items-center container mx-auto min-h-screen">
+        <section id="home" className="flex justify-between items-center container mx-auto min-h-screen">
             <div className="w-1/2 max-w-xl">
                 <h1 className="text-6xl font-extrabold leading-tight">
                     Build Your Ideal <br />
